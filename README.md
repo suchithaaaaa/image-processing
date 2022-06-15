@@ -27,3 +27,16 @@ cv2.waitKey(0)
 cv2.destroyAllwindows()
 **  output**
 ![image](https://user-images.githubusercontent.com/104187589/173813639-77c63461-9337-4783-a3ab-60d7045fb357.png)
+
+
+** example4**
+from PIL import ImageColor
+# using getrgb for yellow
+img1=ImageColor.getrgb("yellow")
+print(img1)
+#using getrgb for red
+img2=ImageColor.getrgb("red")
+print(img2)
+**  output**
+(255, 255, 0)
+(255, 0, 0)
