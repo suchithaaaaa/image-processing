@@ -43,4 +43,8 @@ print(img2)
 (255, 0, 0)
 
 **  example5**
+from PIL import Image 
+img=Image.new('RGB',(200,400),(255,255,0))
+img.show()
+**  output**
 ![image](https://user-images.githubusercontent.com/104187589/173817391-7d4a1af7-ef11-4648-a84a-0c1bf0eb0e40.png)
