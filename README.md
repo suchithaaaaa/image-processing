@@ -41,3 +41,6 @@ print(img2)
 **  output**
 (255, 255, 0)
 (255, 0, 0)
+
+**  example5**
+![image](https://user-images.githubusercontent.com/104187589/173817391-7d4a1af7-ef11-4648-a84a-0c1bf0eb0e40.png)
