@@ -16,3 +16,14 @@ img=mpimg.imread('leaf.jpg')
 plt.imshow(img)
 **  output**
 ![image](https://user-images.githubusercontent.com/104187589/173809911-dd6192ba-ac88-4f1d-9fa4-05e572091e54.png)
+
+
+**  example3**
+from PIL import Image
+img=Image.open("butterfly.jpg")
+img=img.rotate(180)
+img.show()
+cv2.waitKey(0)
+cv2.destroyAllwindows()
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/173813639-77c63461-9337-4783-a3ab-60d7045fb357.png)
