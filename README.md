@@ -37,6 +37,7 @@ print(img1)
 #using getrgb for red
 img2=ImageColor.getrgb("red")
 print(img2)
+
 **  output**
 (255, 255, 0)
 (255, 0, 0)
