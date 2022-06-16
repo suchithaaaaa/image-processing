@@ -90,4 +90,23 @@ Size: (474, 474)
 Width: 474
 Height: 474
 
+** example 8**
+import cv2
+img=cv2.imread('flower.jpg')
+print('original image length width',img.shape)
+cv2.imshow('original image',img)
+#to show the resized image
+imgresize=cv2.resize(img,(150,160))
+cv2.imshow('Resized image',imgresize)
+print('Resized image length width',imgresize.shape)
+cv2.waitKey(0)
+
+** output**
+![image](https://user-images.githubusercontent.com/104187589/174047283-fc01856a-6116-4b59-945a-c62b10eb560f.png)
+![image](https://user-images.githubusercontent.com/104187589/174047408-0972ed84-d246-476a-b7c9-b9e9da0a2279.png)
+![image](https://user-images.githubusercontent.com/104187589/174047576-971e02bf-902d-4b28-85a1-f7cd23865bfd.png)
+
+
+
+
 
