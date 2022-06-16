@@ -71,3 +71,23 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/104187589/174038161-41ef87d0-595a-447d-b840-78b98ec7b0d6.png)
 ![image](https://user-images.githubusercontent.com/104187589/174038393-a6fb31ff-8041-4713-9c2b-abcf07557ecd.png)
 
+**  example 7**
+from PIL import Image
+image=Image.open('flower.jpg')
+print("Filename:",image.filename)
+print("Format:",image.format)
+print("Mode:",image.mode)
+print("Size:",image.size)
+print("Width:",image.width)
+print("Height:",image.height)
+image.close()
+
+**   output **
+Filename: flower.jpg
+Format: JPEG
+Mode: RGB
+Size: (474, 474)
+Width: 474
+Height: 474
+
+
