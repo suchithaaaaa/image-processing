@@ -106,6 +106,27 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/104187589/174047408-0972ed84-d246-476a-b7c9-b9e9da0a2279.png)
 ![image](https://user-images.githubusercontent.com/104187589/174047576-971e02bf-902d-4b28-85a1-f7cd23865bfd.png)
 
+**  example 8**
+import cv2
+# read the image file
+img=cv2.imread('flower.jpg')
+cv2.imshow("RGB",img)
+cv2.waitKey(0)
+# Gray scale
+img=cv2.imread('flower.jpg',0)
+cv2.imshow("Gray",img)
+cv2.waitKey(0)
+# Binary image
+ret,bw_img=cv2.threshold(img,127,255,cv2,THRESH_BINARY)
+cv2.imshow("Binary",bw_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/174054528-f0daa172-ec3c-462e-bfe3-730f74bbab44.png)
+![image](https://user-images.githubusercontent.com/104187589/174054693-2dc0061f-289a-4c9b-9bda-3273db11b105.png)
+![image](https://user-images.githubusercontent.com/104187589/174056336-c10b27d1-bd07-4371-b189-328744b0f156.png)
+
 
 
 
