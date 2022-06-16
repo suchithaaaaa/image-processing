@@ -48,3 +48,26 @@ img=Image.new('RGB',(200,400),(255,255,0))
 img.show()
 **  output**
 ![image](https://user-images.githubusercontent.com/104187589/173817391-7d4a1af7-ef11-4648-a84a-0c1bf0eb0e40.png)
+
+**  example6**
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread('butterfly.jpg')
+plt.imshow(img)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+plt.imshow(img)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+plt.imshow(img)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_CMYK )
+plt.imshow(img)
+plt.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/174037981-b10e816e-a6f0-4bed-bd65-081c3f8a2473.png)
+![image](https://user-images.githubusercontent.com/104187589/174038161-41ef87d0-595a-447d-b840-78b98ec7b0d6.png)
+![image](https://user-images.githubusercontent.com/104187589/174038393-a6fb31ff-8041-4713-9c2b-abcf07557ecd.png)
+
