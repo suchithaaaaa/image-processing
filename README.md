@@ -197,6 +197,44 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/104187589/175265601-8021868f-10d7-4d3c-995a-44bc183076e3.png)
 
 
+**  perform arithmetic operation on images**
+import cv2
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+#Reading image files
+img1=cv2.imread('img.jpg')
+img2=cv2.imread('imgr.jpg')
+# Applying NumPy addition on images
+fimg1=img1+img2
+plt.imshow(fimg1)
+plt.show()
+#saving the output image
+cv2.imwrite('output.jpg',fimg1)
+fimg2=img1-img2
+plt.imshow(fimg2)
+plt.show()
+#saving the output image
+cv2.imwrite('output.jpg',fimg2)
+fimg3=img1*img2
+plt.imshow(fimg3)
+plt.show()
+#saving the output image
+cv2.imwrite('output.jpg',fimg3)
+fimg4=img1/img2
+plt.imshow(fimg4)
+plt.show()
+#saving the output image
+cv2.imwrite('output.jpg',fimg4)
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/175271927-7c7cc9bd-34f5-43fe-bc3c-e99a6c4ff7d2.png)
+
+![image](https://user-images.githubusercontent.com/104187589/175272144-3a1e86fd-0a76-42fb-a3fb-5ba83c12bb91.png)
+
+![image](https://user-images.githubusercontent.com/104187589/175272238-dd2f523b-be45-424e-ba9f-7dd77143bc34.png)
+
+
+
 
 
 
