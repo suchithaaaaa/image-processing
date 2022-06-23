@@ -138,6 +138,69 @@ plt.show()
 **  output **
 ![image](https://user-images.githubusercontent.com/104187589/175007465-0d9b43b2-313e-4440-8b70-22a3e07eea10.png)
 
+**  mask and blur the image**
+import cv2
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+img=cv2.imread('fish2.jpg')
+plt.imshow(img)
+plt.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/175264380-a5c6dff9-d824-4efc-bcd1-9073007e11db.png)
+
+import cv2
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+light_orange=(1,190,200)
+dark_orange=(418,255,255)
+mask=cv2.inRange(img,light_orange,dark_orange)
+result=cv2.bitwise_and(img,img,mask=mask)
+plt.subplot(1,2,1)
+plt.imshow(mask,cmap="gray")
+plt.subplot(1,2,2)
+plt.imshow(result)
+plt.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/175264695-9a14b7e5-7991-4678-92e8-05fecb775404.png)
+
+
+light_white=(0,0,200)
+dark_white=(145,60,255)
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)
+result_white=cv2.bitwise_and(img,img,mask=mask_white)
+plt.subplot(1,2,1)
+plt.imshow(mask_white,cmap="gray")
+plt.subplot(1,2,2)
+plt.imshow(result_white)
+plt.show()
+
+** output**
+![image](https://user-images.githubusercontent.com/104187589/175264932-5fd19f6a-76ca-4e77-b96f-ac0f0fc02016.png)
+
+final_mask=mask+mask_white
+final_result=cv2.bitwise_and(img,img,mask=final_mask)
+plt.subplot(1,2,1)
+plt.imshow(final_mask,cmap="gray")
+plt.subplot(1,2,2)
+plt.imshow(final_result)
+plt.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/175265288-7dda1385-4979-426a-a37b-f5d71df2f365.png)
+
+blur=cv2.GaussianBlur(final_result,(7,7),0)
+plt.imshow(blur)
+plt.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/175265601-8021868f-10d7-4d3c-995a-44bc183076e3.png)
+
+
+
+
+
+
 
 
 
