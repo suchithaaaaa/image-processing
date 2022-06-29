@@ -355,6 +355,35 @@ image_sharped.show()
 ![image](https://user-images.githubusercontent.com/104187589/176419263-9ce7a7da-5475-4f93-8ba2-fdae1abe8fa1.png)
 ![image](https://user-images.githubusercontent.com/104187589/176419397-b6ea2f75-c18c-4c8d-8352-df76f5f8f907.png)
 
+**  18 Morphological operation**
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+from PIL import Image,ImageEnhance
+img=cv2.imread('butterflys.jpg',0)
+ax=plt.subplots(figsize=(20,10))
+kernel=np.ones((5,5),np.uint8)
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
+erosion=cv2.erode(img,kernel,iterations=1)
+dilation=cv2.dilate(img,kernel,iterations=1)
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
+plt.subplot(151)
+plt.imshow(opening)
+plt.subplot(152)
+plt.imshow(closing)
+plt.subplot(153)
+plt.imshow(erosion)
+plt.subplot(154)
+plt.imshow(dilation)
+plt.subplot(155)
+plt.imshow(gradient)
+cv2.waitKey(0)
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/176423196-6c867b8e-1ba5-41bc-b750-1280cec5ec0c.png)
+
+
 
 
 
