@@ -106,7 +106,7 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/104187589/174047408-0972ed84-d246-476a-b7c9-b9e9da0a2279.png)
 ![image](https://user-images.githubusercontent.com/104187589/174047576-971e02bf-902d-4b28-85a1-f7cd23865bfd.png)
 
-**  example 8**
+**  example 9**
 import cv2
 # read the image file
 img=cv2.imread('flower.jpg')
@@ -127,7 +127,7 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/104187589/174054693-2dc0061f-289a-4c9b-9bda-3273db11b105.png)
 ![image](https://user-images.githubusercontent.com/104187589/174056336-c10b27d1-bd07-4371-b189-328744b0f156.png)
 
-** Develop a program to readimage using URL**
+** 10 Develop a program to readimage using URL**
 from skimage import io
 import matplotlib.pyplot as plt
 url='https://www.thesprucepets.com/thmb/FOLwbR72UrUpF9sZ45RYKzgO8dg=/3072x2034/filters:fill(auto,1)/yellow-tang-fish-508304367-5c3d2790c9e77c000117dcf2.jpg'
@@ -138,7 +138,7 @@ plt.show()
 **  output **
 ![image](https://user-images.githubusercontent.com/104187589/175007465-0d9b43b2-313e-4440-8b70-22a3e07eea10.png)
 
-**  mask and blur the image**
+** 11 mask and blur the image**
 import cv2
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
@@ -197,7 +197,7 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/104187589/175265601-8021868f-10d7-4d3c-995a-44bc183076e3.png)
 
 
-**  perform arithmetic operation on images**
+** 12  perform arithmetic operation on images**
 import cv2
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
@@ -233,7 +233,7 @@ cv2.imwrite('output.jpg',fimg4)
 
 ![image](https://user-images.githubusercontent.com/104187589/175272238-dd2f523b-be45-424e-ba9f-7dd77143bc34.png)
 
-**  change the images to different color**
+** 13 change the images to different color**
 import cv2 as c
 import numpy as np
 from PIL import Image
@@ -249,7 +249,7 @@ c.waitKey(0)
 ![image](https://user-images.githubusercontent.com/104187589/175282335-b60e4cfe-8e5c-4ae0-ae0b-f5da7b80dc37.png)
 
 
-**  create an image using 2D array**
+** 14 create an image using 2D array**
 import cv2
 img=cv2.imread('E://butterfly.jpg')
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -272,6 +272,33 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/104187589/175287371-2a457d95-f19c-47a2-84be-8995c03893fb.png)
 ![image](https://user-images.githubusercontent.com/104187589/175287457-7f7bcfb0-def7-4504-93a3-66ba43aa0469.png)
 ![image](https://user-images.githubusercontent.com/104187589/175287557-469a3c5a-a47f-456f-acbf-495b3c4a8adb.png)
+
+** 15 bitwise operation **
+import cv2
+import matplotlib.pyplot as plt
+image1=cv2.imread('plants.jpg',1)
+image2=cv2.imread('plants.jpg')
+ax=plt.subplots(figsize=(15,10))
+bitwiseAnd=cv2.bitwise_and(image1,image2)
+bitwiseOr=cv2.bitwise_or(image1,image2)
+bitwiseXor=cv2.bitwise_xor(image1,image2)
+bitwiseNot_img1=cv2.bitwise_not(image1)
+bitwiseNot_img2=cv2.bitwise_not(image2)
+plt.subplot(151)
+plt.imshow(bitwiseAnd)
+plt.subplot(152)
+plt.imshow(bitwiseOr)
+plt.subplot(153)
+plt.imshow(bitwiseXor)
+plt.subplot(154)
+plt.imshow(bitwiseNot_img1)
+plt.subplot(155)
+plt.imshow(bitwiseNot_img2)
+cv2.waitKey(0)
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/176410181-a04796fb-f8da-47ca-abe1-84f74c291f91.png)
+
 
 
 
