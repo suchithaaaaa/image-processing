@@ -299,6 +299,37 @@ cv2.waitKey(0)
 **  output**
 ![image](https://user-images.githubusercontent.com/104187589/176410181-a04796fb-f8da-47ca-abe1-84f74c291f91.png)
 
+** 16 blur image**
+# importing  libraries
+import cv2
+import numpy as np
+image=cv2.imread('flowers.jpg')
+cv2.imshow('original image',image)
+cv2.waitKey(0)
+# Gaussian Blur
+Gaussian=cv2.GaussianBlur(image,(7,7),0)
+cv2.imshow('Gaussian Blurring',Gaussian)
+cv2.waitKey(0)
+# Median Blur
+median=cv2.medianBlur(image,5)
+cv2.imshow('Median Blurring',median)
+cv2.waitKey(0)
+#Bilateral Blur
+bilateral=cv2.bilateralFilter(image,9,75,75)
+cv2.imshow('Bilateral Blurring',bilateral)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+** output**
+![image](https://user-images.githubusercontent.com/104187589/176414183-12d9a17f-c335-483f-88d5-eeba261be867.png)
+![image](https://user-images.githubusercontent.com/104187589/176414282-d5b3f541-dd94-4ef5-9bd3-5d809bee64a0.png)
+![image](https://user-images.githubusercontent.com/104187589/176414380-e63b2794-ce7b-41e7-bd00-c34323154853.png)
+![image](https://user-images.githubusercontent.com/104187589/176414541-5bfe9741-38ae-45d6-81f9-a06437e90895.png)
+
+
+
+
+
 
 
 
