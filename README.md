@@ -326,6 +326,41 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/104187589/176414380-e63b2794-ce7b-41e7-bd00-c34323154853.png)
 ![image](https://user-images.githubusercontent.com/104187589/176414541-5bfe9741-38ae-45d6-81f9-a06437e90895.png)
 
+**  17 Image enhancement**
+from PIL import Image
+from PIL import ImageEnhance
+image=Image.open('butterflys.jpg')
+image.show()
+enh_bri=ImageEnhance.Brightness(image)
+brightness=1.5
+image_brightened=enh_bri.enhance(brightness)
+image_brightened.show()
+enh_col=ImageEnhance.Color(image)
+color=1.5
+image_colored=enh_col.enhance(color)
+image_colored.show()
+enh_con=ImageEnhance.Contrast(image)
+contrast=1.5
+image_contrasted=enh_con.enhance(contrast)
+image_contrasted.show()
+enh_sha=ImageEnhance.Sharpness(image)
+sharpness=3.0
+image_sharped=enh_sha.enhance(sharpness)
+image_sharped.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/176418905-239805b2-7d3d-49a0-85b4-f7309db8bbda.png)
+![image](https://user-images.githubusercontent.com/104187589/176419017-a78966f9-097a-43ce-b671-573a5d2be9b9.png)
+![image](https://user-images.githubusercontent.com/104187589/176419102-be1faad1-c38b-45b0-af69-2b751e1c3d3d.png)
+![image](https://user-images.githubusercontent.com/104187589/176419263-9ce7a7da-5475-4f93-8ba2-fdae1abe8fa1.png)
+![image](https://user-images.githubusercontent.com/104187589/176419397-b6ea2f75-c18c-4c8d-8352-df76f5f8f907.png)
+
+
+
+
+
+
+
 
 
 
