@@ -410,6 +410,51 @@ if isSaved:
      
       ![image](https://user-images.githubusercontent.com/104187589/179920326-42211e9f-ba76-496a-a890-bdebfbf96101.png)
       ![image](https://user-images.githubusercontent.com/104187589/179920578-35182aec-46bd-4471-951a-ecd96dd88946.png)
+      
+     20 
+      import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('flowers.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+            z[i][j]=image[i][j]
+equ=np.hstack((image,z))
+plt.title('Graylevel slicing with background')
+plt.imshow(equ,'gray')
+plt.show()
+
+ output
+ ![image](https://user-images.githubusercontent.com/104187589/179946674-da7d2983-2cb4-4ce8-852d-5847248f404c.png)
+
+**21**
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('flowers.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+            z[i][j]=0
+equ=np.hstack((image,z))
+plt.title('Graylevel slicing without background')
+plt.imshow(equ,'gray')
+plt.show()
+
+**output**
+![image](https://user-images.githubusercontent.com/104187589/179947491-c91f9ccb-733c-4c8d-bcce-c732061bbf6a.png)
+
+
+
 
 
     
