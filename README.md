@@ -453,6 +453,68 @@ plt.show()
 **output**
 ![image](https://user-images.githubusercontent.com/104187589/179947491-c91f9ccb-733c-4c8d-bcce-c732061bbf6a.png)
 
+** 22 intensity transformation**
+%matplotlib inline
+import imageio
+import matplotlib.pyplot as plt
+import warnings
+import matplotlib.cbook
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+pic=imageio.imread('cats.jpg')
+plt.figure(figsize=(6,6))
+plt.imshow(pic);
+plt.axis('off');
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/179957076-e6c461d7-a37a-48b6-9c36-5283fbd18a7b.png)
+
+negative=255-pic # neg = (L-1) - img
+plt.figure(figsize=(6,6))
+plt.imshow(negative);
+plt.axis('off');
+
+![image](https://user-images.githubusercontent.com/104187589/179957289-952c2b50-841d-4646-b303-f17011352fb7.png)
+
+%matplotlib inline
+
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+
+pic=imageio.imread('cats.jpg')
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])
+gray=gray(pic)
+
+max_=np.max(gray)
+
+def log_transform():
+     return(255/np.log(1+max_))*np.log(1+gray)
+plt.figure(figsize=(5,5))
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
+plt.axis('off');
+        **  output**
+        ![image](https://user-images.githubusercontent.com/104187589/179957506-564c40ef-4e47-4217-b610-0c2ae73bdeb7.png)
+        
+        import imageio
+import matplotlib.pyplot as plt
+
+#Gamma encoding
+pic=imageio.imread('cats.jpg')
+gamma=2.2# Gamma < 1 ~ Dark ; Gamma > 1 ~ Bright
+
+gamma_correction=((pic/255)**(1/gamma))
+plt.figure(figsize=(5,5))
+plt.imshow(gamma_correction)
+plt.axis('off');
+
+** output**
+![image](https://user-images.githubusercontent.com/104187589/179957693-49fd1560-a7f2-49d3-a1a3-4f26df819aa6.png)
+
+
+
+
+
+
 
 
 
