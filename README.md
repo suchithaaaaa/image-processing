@@ -510,6 +510,65 @@ plt.axis('off');
 ** output**
 ![image](https://user-images.githubusercontent.com/104187589/179957693-49fd1560-a7f2-49d3-a1a3-4f26df819aa6.png)
 
+**  23 basic image manipulation**
+#Image sharpen
+from PIL import Image
+from PIL import ImageFilter
+import matplotlib.pyplot as plt
+# Load the image
+my_image=Image.open('cats.jpg')
+#Use sharpen function
+sharp=my_image.filter(ImageFilter.SHARPEN)
+#Save the image
+sharp.save('E:/image_sharpen.jpg')
+sharp.show()
+plt.imshow(sharp)
+plt.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/179964684-dea3123e-47e1-40de-828a-73c0a87ad41e.png)
+
+#Image flip
+import matplotlib.pyplot as plt
+#load the image
+img=Image.open('cats.jpg')
+plt.imshow(img)
+plt.show()
+#use the flip function
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)
+
+#save the image
+flip.save('E:image_flip.jpg')
+plt.imshow(flip)
+plt.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/179964910-dc8113d3-0217-429c-b9f1-131f449763e1.png)
+
+# Importing Image class from PIL module
+from PIL import Image
+import matplotlib.pyplot as plt
+# open a image in RGB mode
+im=Image.open('cats.jpg')
+
+# size of the image in pixels(size of original image)
+# (This is not mandatory)
+width,height=im.size
+
+#Cropped image of above dimension
+# (It will not change original image)
+im1=im.crop((25,20,125,120))
+
+# shows the image in image viewer
+im1.show()
+plt.imshow(im1)
+plt.show()
+
+**  output**
+![image](https://user-images.githubusercontent.com/104187589/179965123-d911361c-6418-4e9d-acde-ee4c13e14b13.png)
+
+
+
 
 
 
