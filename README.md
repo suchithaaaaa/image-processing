@@ -318,270 +318,239 @@ cv2.destroyAllWindows()<br>
 
 ** output**<br>
 ![image](https://user-images.githubusercontent.com/104187589/176414183-12d9a17f-c335-483f-88d5-eeba261be867.png)<br>
-![image](https://user-images.githubusercontent.com/104187589/176414282-d5b3f541-dd94-4ef5-9bd3-5d809bee64a0.png)
-![image](https://user-images.githubusercontent.com/104187589/176414380-e63b2794-ce7b-41e7-bd00-c34323154853.png)
-![image](https://user-images.githubusercontent.com/104187589/176414541-5bfe9741-38ae-45d6-81f9-a06437e90895.png)
+![image](https://user-images.githubusercontent.com/104187589/176414282-d5b3f541-dd94-4ef5-9bd3-5d809bee64a0.png)<br>
+![image](https://user-images.githubusercontent.com/104187589/176414380-e63b2794-ce7b-41e7-bd00-c34323154853.png)<br>
+![image](https://user-images.githubusercontent.com/104187589/176414541-5bfe9741-38ae-45d6-81f9-a06437e90895.png)<br>
 
-**  17 Image enhancement**
-from PIL import Image
-from PIL import ImageEnhance
-image=Image.open('butterflys.jpg')
-image.show()
-enh_bri=ImageEnhance.Brightness(image)
-brightness=1.5
-image_brightened=enh_bri.enhance(brightness)
-image_brightened.show()
-enh_col=ImageEnhance.Color(image)
-color=1.5
-image_colored=enh_col.enhance(color)
-image_colored.show()
-enh_con=ImageEnhance.Contrast(image)
-contrast=1.5
-image_contrasted=enh_con.enhance(contrast)
-image_contrasted.show()
-enh_sha=ImageEnhance.Sharpness(image)
-sharpness=3.0
-image_sharped=enh_sha.enhance(sharpness)
-image_sharped.show()
+**  17 Image enhancement**<br>
+from PIL import Image<br>
+from PIL import ImageEnhance<br>
+image=Image.open('butterflys.jpg')<br>
+image.show()<br>
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5<br>
+image_brightened=enh_bri.enhance(brightness)<br>
+image_brightened.show()<br>
+enh_col=ImageEnhance.Color(image)<br>
+color=1.5<br>
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
+image_contrasted=enh_con.enhance(contrast)<br>
+image_contrasted.show()<br>
+enh_sha=ImageEnhance.Sharpness(image)<br>
+sharpness=3.0<br>
+image_sharped=enh_sha.enhance(sharpness)<br>
+image_sharped.show()<br>
 
-**  output**
-![image](https://user-images.githubusercontent.com/104187589/176418905-239805b2-7d3d-49a0-85b4-f7309db8bbda.png)
-![image](https://user-images.githubusercontent.com/104187589/176419017-a78966f9-097a-43ce-b671-573a5d2be9b9.png)
-![image](https://user-images.githubusercontent.com/104187589/176419102-be1faad1-c38b-45b0-af69-2b751e1c3d3d.png)
-![image](https://user-images.githubusercontent.com/104187589/176419263-9ce7a7da-5475-4f93-8ba2-fdae1abe8fa1.png)
-![image](https://user-images.githubusercontent.com/104187589/176419397-b6ea2f75-c18c-4c8d-8352-df76f5f8f907.png)
+**  output**<br>
+![image](https://user-images.githubusercontent.com/104187589/176418905-239805b2-7d3d-49a0-85b4-f7309db8bbda.png)<br>
+![image](https://user-images.githubusercontent.com/104187589/176419017-a78966f9-097a-43ce-b671-573a5d2be9b9.png)<br>
+![image](https://user-images.githubusercontent.com/104187589/176419102-be1faad1-c38b-45b0-af69-2b751e1c3d3d.png)<br>
+![image](https://user-images.githubusercontent.com/104187589/176419263-9ce7a7da-5475-4f93-8ba2-fdae1abe8fa1.png)<br>
+![image](https://user-images.githubusercontent.com/104187589/176419397-b6ea2f75-c18c-4c8d-8352-df76f5f8f907.png)<br>
 
-**  18 Morphological operation**
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-from PIL import Image,ImageEnhance
-img=cv2.imread('butterflys.jpg',0)
-ax=plt.subplots(figsize=(20,10))
-kernel=np.ones((5,5),np.uint8)
-opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
-closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
-erosion=cv2.erode(img,kernel,iterations=1)
-dilation=cv2.dilate(img,kernel,iterations=1)
-gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
-plt.subplot(151)
-plt.imshow(opening)
-plt.subplot(152)
-plt.imshow(closing)
-plt.subplot(153)
-plt.imshow(erosion)
-plt.subplot(154)
-plt.imshow(dilation)
-plt.subplot(155)
-plt.imshow(gradient)
-cv2.waitKey(0)
+**  18 Morphological operation**<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+from PIL import Image,ImageEnhance<br>
+img=cv2.imread('butterflys.jpg',0)<br>
+ax=plt.subplots(figsize=(20,10))<br>
+kernel=np.ones((5,5),np.uint8)<br>
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)<br>
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)<br>
+erosion=cv2.erode(img,kernel,iterations=1)<br>
+dilation=cv2.dilate(img,kernel,iterations=1)<br>
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)<br>
+plt.subplot(151)<br>
+plt.imshow(opening)<br>
+plt.subplot(152)<br>
+plt.imshow(closing)<br>
+plt.subplot(153)<br>
+plt.imshow(erosion)<br>
+plt.subplot(154)<br>
+plt.imshow(dilation)<br>
+plt.subplot(155)<br>
+plt.imshow(gradient)<br>
+cv2.waitKey(0)<br>
 
-**  output**
-![image](https://user-images.githubusercontent.com/104187589/176423196-6c867b8e-1ba5-41bc-b750-1280cec5ec0c.png)
-
-
-19  develop a program to 
+**  output**<br>
+![image](https://user-images.githubusercontent.com/104187589/176423196-6c867b8e-1ba5-41bc-b750-1280cec5ec0c.png)<br>
 
 
-
-
-
-
-
-
-
-
-import cv2
-OriginalImg=cv2.imread('cat.jpg')
-GrayImg=cv2.imread('cat.jpg',0)
-isSaved=cv2.imwrite('E:/i.jpg',GrayImg)
-cv2.imshow('Display Original Image',OriginalImg)
-cv2.imshow('Display Grayscale Image',GrayImg)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-if isSaved:
-    print('The Image is successfully saved')
+19  develop a program to (1) read the image,convert it into grayscale image (2)write(save) the gray scale image and (3)display the original image and gray scale image<br>
+import cv2<br>
+OriginalImg=cv2.imread('cat.jpg')<br>
+GrayImg=cv2.imread('cat.jpg',0)<br>
+isSaved=cv2.imwrite('E:/i.jpg',GrayImg)<br>
+cv2.imshow('Display Original Image',OriginalImg)<br>
+cv2.imshow('Display Grayscale Image',GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+if isSaved:<br>
+    print('The Image is successfully saved')<br>
     
-      output
-     
-      ![image](https://user-images.githubusercontent.com/104187589/179920326-42211e9f-ba76-496a-a890-bdebfbf96101.png)
-      ![image](https://user-images.githubusercontent.com/104187589/179920578-35182aec-46bd-4471-951a-ecd96dd88946.png)
+**output**<br> 
+![image](https://user-images.githubusercontent.com/104187589/179920326-42211e9f-ba76-496a-a890-bdebfbf96101.png)<br>
+![image](https://user-images.githubusercontent.com/104187589/179920578-35182aec-46bd-4471-951a-ecd96dd88946.png)<br>
       
-     20 
-      import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('flowers.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-    for j in range(0,y):
-        if(image[i][j]>50 and image[i][j]<150):
-            z[i][j]=255
-        else:
-            z[i][j]=image[i][j]
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing with background')
-plt.imshow(equ,'gray')
-plt.show()
+20 graylevel slicing with background<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('flowers.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+            z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing with background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
 
- output
- ![image](https://user-images.githubusercontent.com/104187589/179946674-da7d2983-2cb4-4ce8-852d-5847248f404c.png)
+ **output**<br>
+![image](https://user-images.githubusercontent.com/104187589/179946674-da7d2983-2cb4-4ce8-852d-5847248f404c.png)<br>
 
-**21**
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('flowers.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-    for j in range(0,y):
-        if(image[i][j]>50 and image[i][j]<150):
-            z[i][j]=255
-        else:
-            z[i][j]=0
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing without background')
-plt.imshow(equ,'gray')
-plt.show()
+21 graylevel slicing without background<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('flowers.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+            z[i][j]=0<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing without background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
 
-**output**
-![image](https://user-images.githubusercontent.com/104187589/179947491-c91f9ccb-733c-4c8d-bcce-c732061bbf6a.png)
+**output**<br>
+![image](https://user-images.githubusercontent.com/104187589/179947491-c91f9ccb-733c-4c8d-bcce-c732061bbf6a.png)<br>
 
-** 22 intensity transformation**
-%matplotlib inline
-import imageio
-import matplotlib.pyplot as plt
-import warnings
-import matplotlib.cbook
-warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
-pic=imageio.imread('cats.jpg')
-plt.figure(figsize=(6,6))
-plt.imshow(pic);
-plt.axis('off');
+** 22 intensity transformation (1) image negative (2) log transformation (3)gamma correction**<br>
+%matplotlib inline<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+import warnings<br>
+import matplotlib.cbook<br>
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
+pic=imageio.imread('cats.jpg')<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(pic);<br>
+plt.axis('off');<br>
+<br>
+**  output**<br>
+![image](https://user-images.githubusercontent.com/104187589/179957076-e6c461d7-a37a-48b6-9c36-5283fbd18a7b.png)<br>
+<br>
+negative=255-pic # neg = (L-1) - img<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(negative);<br>
+plt.axis('off');<br>
+<br>
+![image](https://user-images.githubusercontent.com/104187589/179957289-952c2b50-841d-4646-b303-f17011352fb7.png)<br>
+<br>
+%matplotlib inline<br>
+<br>
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+<br>
+pic=imageio.imread('cats.jpg')<br>
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])<br>
+gray=gray(pic)<br>
+<br>
+max_=np.max(gray)<br>
 
-**  output**
-![image](https://user-images.githubusercontent.com/104187589/179957076-e6c461d7-a37a-48b6-9c36-5283fbd18a7b.png)
-
-negative=255-pic # neg = (L-1) - img
-plt.figure(figsize=(6,6))
-plt.imshow(negative);
-plt.axis('off');
-
-![image](https://user-images.githubusercontent.com/104187589/179957289-952c2b50-841d-4646-b303-f17011352fb7.png)
-
-%matplotlib inline
-
-import imageio
-import numpy as np
-import matplotlib.pyplot as plt
-
-pic=imageio.imread('cats.jpg')
-gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])
-gray=gray(pic)
-
-max_=np.max(gray)
-
-def log_transform():
-     return(255/np.log(1+max_))*np.log(1+gray)
-plt.figure(figsize=(5,5))
-plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
-plt.axis('off');
-        **  output**
-        ![image](https://user-images.githubusercontent.com/104187589/179957506-564c40ef-4e47-4217-b610-0c2ae73bdeb7.png)
-        
-        import imageio
-import matplotlib.pyplot as plt
-
-#Gamma encoding
-pic=imageio.imread('cats.jpg')
-gamma=2.2# Gamma < 1 ~ Dark ; Gamma > 1 ~ Bright
-
-gamma_correction=((pic/255)**(1/gamma))
-plt.figure(figsize=(5,5))
-plt.imshow(gamma_correction)
-plt.axis('off');
-
-** output**
-![image](https://user-images.githubusercontent.com/104187589/179957693-49fd1560-a7f2-49d3-a1a3-4f26df819aa6.png)
-
-**  23 basic image manipulation**
-#Image sharpen
-from PIL import Image
-from PIL import ImageFilter
-import matplotlib.pyplot as plt
-# Load the image
-my_image=Image.open('cats.jpg')
-#Use sharpen function
-sharp=my_image.filter(ImageFilter.SHARPEN)
-#Save the image
-sharp.save('E:/image_sharpen.jpg')
-sharp.show()
-plt.imshow(sharp)
-plt.show()
-
-**  output**
-![image](https://user-images.githubusercontent.com/104187589/179964684-dea3123e-47e1-40de-828a-73c0a87ad41e.png)
-
-#Image flip
-import matplotlib.pyplot as plt
-#load the image
-img=Image.open('cats.jpg')
-plt.imshow(img)
-plt.show()
-#use the flip function
-flip=img.transpose(Image.FLIP_LEFT_RIGHT)
-
-#save the image
-flip.save('E:image_flip.jpg')
-plt.imshow(flip)
-plt.show()
-
-**  output**
-![image](https://user-images.githubusercontent.com/104187589/179964910-dc8113d3-0217-429c-b9f1-131f449763e1.png)
-
-# Importing Image class from PIL module
-from PIL import Image
-import matplotlib.pyplot as plt
-# open a image in RGB mode
-im=Image.open('cats.jpg')
-
-# size of the image in pixels(size of original image)
-# (This is not mandatory)
-width,height=im.size
-
-#Cropped image of above dimension
-# (It will not change original image)
-im1=im.crop((25,20,125,120))
-
-# shows the image in image viewer
-im1.show()
-plt.imshow(im1)
-plt.show()
-
-**  output**
-![image](https://user-images.githubusercontent.com/104187589/179965123-d911361c-6418-4e9d-acde-ee4c13e14b13.png)
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
+def log_transform():<br>
+ return(255/np.log(1+max_))*np.log(1+gray)<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
+plt.axis('off');<br>
+        **  output**<br>
+![image](https://user-images.githubusercontent.com/104187589/179957506-564c40ef-4e47-4217-b610-0c2ae73bdeb7.png)<br>
+        <br>
+        import imageio<br>
+import matplotlib.pyplot as plt<br>
+<br>
+#Gamma encoding<br>
+pic=imageio.imread('cats.jpg')<br>
+gamma=2.2# Gamma < 1 ~ Dark ; Gamma > 1 ~ Bright<br>
+<br>
+gamma_correction=((pic/255)**(1/gamma))<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(gamma_correction)<br>
+plt.axis('off');<br>
+<br>
+** output**<br>
+![image](https://user-images.githubusercontent.com/104187589/179957693-49fd1560-a7f2-49d3-a1a3-4f26df819aa6.png)<br>
+<br>
+**  23 basic image manipulation**<br>
+#Image sharpen<br>
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+# Load the image<br>
+my_image=Image.open('cats.jpg')<br>
+#Use sharpen function<br>
+sharp=my_image.filter(ImageFilter.SHARPEN)<br>
+#Save the image<br>
+sharp.save('E:/image_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br>
+<br>
+**  output**<br>
+![image](https://user-images.githubusercontent.com/104187589/179964684-dea3123e-47e1-40de-828a-73c0a87ad41e.png)<br>
+<br>
+#Image flip<br>
+import matplotlib.pyplot as plt<br>
+#load the image<br>
+img=Image.open('cats.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+#use the flip function<br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
+<br>
+#save the image<br>
+flip.save('E:image_flip.jpg')<br>
+plt.imshow(flip)<br>
+plt.show()<br>
+<br>
+**  output**<br>
+![image](https://user-images.githubusercontent.com/104187589/179964910-dc8113d3-0217-429c-b9f1-131f449763e1.png)<br>
+<br>
+# Importing Image class from PIL module<br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+# open a image in RGB mode<br>
+im=Image.open('cats.jpg')<br>
+<br>
+# size of the image in pixels(size of original image)<br>
+# (This is not mandatory)<br>
+width,height=im.size<br>
+<br>
+#Cropped image of above dimension<br>
+# (It will not change original image)<br>
+im1=im.crop((25,20,125,120))<br>
+<br>
+# shows the image in image viewer<br>
+im1.show()<br>
+plt.imshow(im1)<br>
+plt.show()<br>
+<br>
+**  output**<br>
+![image](https://user-images.githubusercontent.com/104187589/179965123-d911361c-6418-4e9d-acde-ee4c13e14b13.png)<br>
 
 
 
