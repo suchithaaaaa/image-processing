@@ -496,7 +496,7 @@ plt.axis('off');<br>
 ![image](https://user-images.githubusercontent.com/104187589/179957693-49fd1560-a7f2-49d3-a1a3-4f26df819aa6.png)<br>
 <br>
 <br>
-**  23 basic image manipulation**<br>
+**  23 basic image manipulation (1) sharpness (2) flipping (3) cropping**<br>
 #Image sharpen<br>
 from PIL import Image<br>
 from PIL import ImageFilter<br>
