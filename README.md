@@ -606,6 +606,146 @@ np.std(img)<br>
 <br>
 **output**<br>
 67.00845599929046<br>
+<br>
+**matrix**
+from PIL import Image
+from numpy import asarray
+img = Image.open('flowers.jpg')
+numpydata = asarray(img)
+print(numpydata)
+**output**
+[[ 62 111  45]
+  [ 63 112  46]
+  [ 61 112  46]
+  ...
+  [ 72  98  35]
+  [ 75 101  38]
+  [ 77 103  40]]
+
+ [[ 65 114  48]
+  [ 68 117  51]
+  [ 63 112  47]
+  ...
+  [ 71  99  38]
+  [ 74 103  39]
+  [ 78 107  43]]
+
+ [[ 62 111  45]
+  [ 71 120  54]
+  [ 69 118  52]
+  ...
+  [ 73 105  42]
+  [ 78 108  46]
+  [ 85 115  53]]
+
+ ...
+
+ [[ 72  99  32]
+  [ 71  98  31]
+  [ 67  94  27]
+  ...
+  [ 63 101  50]
+  [ 67 105  54]
+  [ 48  86  35]]
+
+ [[ 66  92  21]
+  [ 69  95  24]
+  [ 69  96  25]
+  ...
+  [ 53  91  40]
+  [ 65 103  52]
+  [ 77 115  64]]
+
+ [[ 68  94  21]
+  [ 68  94  21]
+  [ 65  92  21]
+  ...
+  [ 54  92  41]
+  [ 53  90  39]
+  [ 53  90  39]]]
+  <br>
+  <br>
+  from PIL import Image
+import matplotlib.pyplot as plt
+input_image = Image.new(mode="RGB", size=(1000, 1000),color="pink")
+pixel_map = input_image.load()
+width, height = input_image.size
+z = 100
+for i in range(width):
+    for j in range(height):
+          if((i >= z and i <= width-z) and (j >= z and j <= height-z)):
+            pixel_map[i, j] = (230,230,250)
+else:
+     pixel_map[i, j] = (216,191,216)
+for i in range(width):
+    pixel_map[i, i] = (0, 0, 255)
+    pixel_map[i, width-i-1] = (0, 0, 255)
+plt.imshow(input_image)
+plt.show()
+**output**
+![image](https://user-images.githubusercontent.com/104187589/181229615-20853161-770f-4593-b01d-bf0e47b9501f.png)
+<br>
+<br>
+import numpy as np
+import matplotlib.pyplot as plt
+arr = np.zeros((256,256,3), dtype=np.uint8)
+imgsize = arr.shape[:2]
+innerColor = (255, 255, 255)
+outerColor = (0, 0, 0)
+for y in range(imgsize[1]):
+    for x in range(imgsize[0]):
+        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)
+        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)
+        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)
+        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)
+        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)
+        arr[y, x] = (int(r), int(g), int(b))
+plt.imshow(arr, cmap='gray')
+plt.show()
+**output**
+![image](https://user-images.githubusercontent.com/104187589/181229854-f25046e6-923b-44c6-8eb8-61461f5e36be.png)
+<br>
+<br>
+import numpy as np
+import matplotlib.pyplot as plt
+
+imgsize=(650,650)
+image = Image.new('RGB', imgsize)
+innerColor = [153,0,0]
+for y in range(imgsize[1]):
+    for x in range(imgsize[0]):
+        distanceToCenter =np.sqrt((x - imgsize[0]/2) ** 2 + (y - imgsize[1]/2) ** 2)
+        distanceToCenter = (distanceToCenter) / (np.sqrt(2) * imgsize[0]/2)
+        r = distanceToCenter + innerColor[0] * (1 - distanceToCenter)
+        g = distanceToCenter + innerColor[1] * (1 - distanceToCenter)
+        image.putpixel((x, y), (int(r), int(g), int(b)))
+plt.imshow(image)
+plt.show()
+**output**
+![image](https://user-images.githubusercontent.com/104187589/181230362-71e74f24-5365-458c-978f-d7903496c18b.png)
+<br>
+<br>
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+w, h = 512, 512
+data = np.zeros((h, w, 3), dtype=np.uint8)
+data[0:100, 0:100] = [255, 0, 0]
+data[100:200, 100:200] = [255, 0, 255]
+data[200:300, 200:300] = [0, 255, 0]
+data[300:400, 300:400] = [255, 255, 0]
+data[400:500, 400:500] = [0, 255, 255]
+img = Image.fromarray(data, 'RGB')
+img.save('flowers.jpg')
+plt.imshow(img)
+plt.show()
+<br>
+<br>
+**output**
+![image](https://user-images.githubusercontent.com/104187589/181230617-817756d1-9992-40d8-8980-0e10c41e8116.png)
+
+
+
 
 
 
