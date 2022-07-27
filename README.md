@@ -550,6 +550,63 @@ plt.show()<br>
 **output**<br>
 ![image](https://user-images.githubusercontent.com/104187589/179965123-d911361c-6418-4e9d-acde-ee4c13e14b13.png)<br>
 
+**1  standard deviation**  <br>
+from PIL import Image, ImageStat<br>
+
+im = Image.open('butterflys.jpg')<br>
+stat = ImageStat.Stat(im)<br>
+print(stat.stddev)<br>
+<br>
+**output**<br>
+[76.55933208003023, 57.05839133604739, 55.21102658091532]<br>
+<br>
+**maximum**<br>
+import cv2<br>
+import numpy as np<br>
+img=cv2.imread('butterflys.jpg')<br>
+cv2.imshow('butterflys.jpg',img)<br>
+cv2.waitKey(0)<br>
+#max_channels=np.amax([np.amax(img[:,:,0]),np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
+#print(max_channels)<br>
+np.max(img)<br>
+**output**<br>
+![image](https://user-images.githubusercontent.com/104187589/181221228-835e8fb1-a3d7-43fe-96f5-e1ff38768d53.png)<br>
+<br>
+**minimum**<br>
+import cv2<br>
+import numpy as np<br>
+img=cv2.imread('butterflys.jpg')<br>
+cv2.imshow('butterfys.jpg',img)<br>
+cv2.waitKey(0)<br>
+#min_channels=np.amin([np.amin(img[:,:,0]),np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
+#print(min_channels)<br>
+np.min(img)<br>
+<br>
+**output**<br>
+![image](https://user-images.githubusercontent.com/104187589/181225007-28c73f50-1715-422c-b57f-d754da2c27de.png)<br>
+<br>
+**average**<br>
+import cv2<br>
+import numpy as np<br>
+img=cv2.imread('butterflys.jpg')<br>
+cv2.imshow('butterflys.jpg',img)<br>
+cv2.waitKey(0)<br>
+np.average(img)<br>
+<br>
+**output**<br>
+89.87986752773638<br>
+<br>
+** standard deviation**<br>
+import cv2<br>
+import numpy as np<br>
+img=cv2.imread('butterflys.jpg')<br>
+cv2.imshow('butterflys.jpg',img)<br>
+cv2.waitKey(0)<br>
+np.std(img)<br>
+<br>
+**output**<br>
+67.00845599929046<br>
+
 
 
 
