@@ -812,6 +812,78 @@ array_1 = np.array([[255, 0,17], <br>
 imshow(array_1,cmap='gray');<br>
 ![image](https://user-images.githubusercontent.com/104187589/181437602-6b5c4781-eb26-47de-bbcd-295d1034bba9.png)<br>
 <br>
+**matrix to display image with max,min,average and standard deviation**<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+array_colors = np.array([[[245, 20, 36],<br> 
+                         [10, 215, 30],<br>
+                         [40, 50, 205]],<br>
+                         [[70, 50, 10], <br>
+                    [25, 230, 85],<br>
+                    [12, 128, 128]],<br>
+                    [[25, 212, 3], <br>
+                    [55, 5, 250],<br>
+                    [240, 152, 25]],<br>
+                    ])<br>
+plt.imshow(array_colors)<br>
+np.max(array_colors)<br>
+**output**<br>
+![image](https://user-images.githubusercontent.com/104187589/181444083-8150b23d-112d-44f6-8621-4709f4b367d3.png)<br>
+<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+<br>
+array_colors = np.array([[[245, 20, 36], <br>
+                         [10, 215, 30],<br>
+                         [40, 50, 205]],<br>
+                         [[70, 50, 10], <br>
+                    [25, 230, 85],<br>
+                    [12, 128, 128]],<br>
+                    [[25, 212, 3], <br>
+                    [55, 5, 250],<br>
+                    [240, 152, 25]],<br>
+                    ])<br>
+plt.imshow(array_colors)<br>
+np.min(array_colors)<br>
+<br>
+**output**<br>
+![image](https://user-images.githubusercontent.com/104187589/181444377-36f90f16-ef44-495f-bdf9-a6e9c8578fc1.png)<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+array_colors = np.array([[[245, 20, 36], <br>
+                         [10, 215, 30],<br>
+                         [40, 50, 205]],<br>
+                         [[70, 50, 10], <br>
+                    [25, 230, 85],<br>
+                    [12, 128, 128]],<br>
+                    [[25, 212, 3], <br>
+                    [55, 5, 250],<br>
+                    [240, 152, 25]],<br>
+                    ])<br>
+plt.imshow(array_colors)<br>
+np.average(array_colors)<br>
+<br>
+![image](https://user-images.githubusercontent.com/104187589/181444626-c347b067-a178-480d-9aa5-a29fc6bcba0d.png)<br>
+<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+array_colors = np.array([[[245, 20, 36],<br> 
+                         [10, 215, 30],<br>
+                         [40, 50, 205]],<br>
+                         [[70, 50, 10], <br>
+                    [25, 230, 85],<br>
+                    [12, 128, 128]],<br>
+                    [[25, 212, 3], <br>
+                    [55, 5, 250],<br>
+                    [240, 152, 25]],<br>
+                    ])<br>
+plt.imshow(array_colors)<br>
+np.std(array_colors)<br>
+<br>
+![image](https://user-images.githubusercontent.com/104187589/181444827-ac207970-89f9-40e0-8861-885bf002e344.png)<br>
+<br>
+
+
 
 
 
