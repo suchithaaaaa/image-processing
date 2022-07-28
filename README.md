@@ -744,17 +744,17 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/104187589/181230617-817756d1-9992-40d8-8980-0e10c41e8116.png)<br>
 <br>
 **matrix form**<br>
-# Python3 program for printing<br>
-# the rectangular pattern<br>
+#Python3 program for printing<br>
+#the rectangular pattern<br>
  <br>
-# Function to print the pattern<br>
+**Function to print the pattern**<br>
 def printPattern(n):<br>
  <br>
     arraySize = n * 2 - 1;<br>
     result = [[0 for x in range(arraySize)]<br>
                  for y in range(arraySize)];<br>
          <br>
-    # Fill the values<br>
+    #Fill the values<br>
     for i in range(arraySize):<br>
         for j in range(arraySize):<br>
             if(abs(i - (arraySize // 2)) ><br>
@@ -769,7 +769,7 @@ def printPattern(n):<br>
             print(result[i][j], end = " ");<br>
         print("");<br>
  <br>
-# Driver Code<br>
+#Driver Code<br>
 n = 4;<br>
  <br>
 printPattern(n);<br>
@@ -784,7 +784,7 @@ printPattern(n);<br>
 3 3 3 3 3 3 3<br>
 <br>
 **image displayed in matrix representation**<br>
-# First import the required Python Libraries<br>
+**First import the required Python Libraries**<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 from skimage import img_as_uint<br>
@@ -798,7 +798,8 @@ imshow(array_1,cmap='gray');<br>
 <br>
 **output**<br>
 ![image](https://user-images.githubusercontent.com/104187589/181437231-a369c244-9ca9-4ac0-82f9-513b268154f7.png)<br>
-# First import the required Python Libraries<br>
+<br><br>
+**First import the required Python Libraries**<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 from skimage import img_as_uint<br>
