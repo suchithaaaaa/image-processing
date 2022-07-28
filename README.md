@@ -740,7 +740,6 @@ img.save('flowers.jpg')<br>
 plt.imshow(img)<br>
 plt.show()<br>
 <br>
-<br>
 **output**<br>
 ![image](https://user-images.githubusercontent.com/104187589/181230617-817756d1-9992-40d8-8980-0e10c41e8116.png)<br>
 <br>
@@ -799,7 +798,6 @@ imshow(array_1,cmap='gray');<br>
 <br>
 **output**<br>
 ![image](https://user-images.githubusercontent.com/104187589/181437231-a369c244-9ca9-4ac0-82f9-513b268154f7.png)<br>
-<br>
 # First import the required Python Libraries<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
@@ -811,7 +809,6 @@ array_1 = np.array([[255, 0,17], <br>
                     [100,0, 255],<br>
                     [255,0,35]])<br>
 imshow(array_1,cmap='gray');<br>
-<br>
 ![image](https://user-images.githubusercontent.com/104187589/181437602-6b5c4781-eb26-47de-bbcd-295d1034bba9.png)<br>
 <br>
 
