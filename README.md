@@ -782,7 +782,39 @@ printPattern(n);
 3 2 1 0 1 2 3 
 3 2 1 1 1 2 3 
 3 2 2 2 2 2 3 
-3 3 3 3 3 3 3 
+3 3 3 3 3 3 3
+<br>
+**image displayed in matrix representation**
+# First import the required Python Libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from skimage import img_as_uint
+from skimage.io import imshow, imread
+from skimage.color import rgb2hsv
+from skimage.color import rgb2gray
+array_1 = np.array([[255, 0,17], 
+                    [100,0, 255],
+                    [255,0,35]])
+imshow(array_1,cmap='gray');
+<br>
+**output**
+![image](https://user-images.githubusercontent.com/104187589/181437231-a369c244-9ca9-4ac0-82f9-513b268154f7.png)
+<br>
+# First import the required Python Libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from skimage import img_as_uint
+from skimage.io import imshow, imread
+from skimage.color import rgb2hsv
+from skimage.color import rgb2gray
+array_1 = np.array([[255, 0,17], 
+                    [100,0, 255],
+                    [255,0,35]])
+imshow(array_1,cmap='gray');
+<br>
+![image](https://user-images.githubusercontent.com/104187589/181437602-6b5c4781-eb26-47de-bbcd-295d1034bba9.png)
+
+
 
 
 
